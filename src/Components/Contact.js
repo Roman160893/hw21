@@ -10,7 +10,7 @@ class Contact extends Component {
 
       return (
          <div className='contact__wrapper'>
-            <input placeholder='Search contact' onChange={{onChange}} ></input>
+            <input placeholder='Search contact' ></input>
             {this.props.contact.map((el) =>
                <div className='contact__wrapper-card'>
                   <p className='card__wrapper'>{el.gender == 'male' ? <img className='card__icon' src='https://cdn-icons-png.flaticon.com/512/1340/1340619.png' /> : el.gender == 'female' ? <img className='card__icon' src='https://cdn-icons-png.flaticon.com/512/766/766514.png' /> : el.firstName[0]}</p>
