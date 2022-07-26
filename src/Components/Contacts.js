@@ -10,7 +10,7 @@ class Contacts extends Component {
                firstName: "Барней",
                lastName: "Стинсовський",
                phone: "+380956319521",
-               gender: "male"
+               gender: "male",
             },
             {
                firstName: "Робін",
@@ -41,10 +41,13 @@ class Contacts extends Component {
                phone: "+380956319521",
                gender: "male",
             },
-            ],
-         search: ""
+            ]
       }
    }
+
+
+
+
 
    render() {
       return (
