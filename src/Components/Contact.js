@@ -31,13 +31,12 @@ class Contact extends Component {
    filter = () => {
       let filterContact = [];
       this.props.contact.filter(e => {
-         if (Object.values(e).join().toLocaleLowerCase().includes(this.state.search.toLocaleLowerCase()) && this.state.checkedFemale && this.state.checkedNotSpecified && this.state.checkedMale) {
+
+         if (e.gender === 'female' && this.state.checkedFemale == true && Object.values(e).join().toLocaleLowerCase().includes(this.state.search.toLocaleLowerCase())) {
             filterContact.push(e)
-         } else if (e.gender === 'female' && this.state.checkedFemale == true && (this.state.search == '')) {
+         } else if (e.gender === undefined && this.state.checkedNotSpecified == true && Object.values(e).join().toLocaleLowerCase().includes(this.state.search.toLocaleLowerCase())) {
             filterContact.push(e)
-         } else if (e.gender === undefined && this.state.checkedNotSpecified == true && (this.state.search == '')) {
-            filterContact.push(e)
-         } else if (e.gender === 'male' && this.state.checkedMale == true && (this.state.search === '')) {
+         } else if (e.gender === 'male' && this.state.checkedMale == true && Object.values(e).join().toLocaleLowerCase().includes(this.state.search.toLocaleLowerCase())) {
             filterContact.push(e);
          }
       })
